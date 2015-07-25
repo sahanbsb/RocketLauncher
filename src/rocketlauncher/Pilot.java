@@ -12,7 +12,7 @@ import java.util.HashMap;
  * @author Sahan
  */
 public class Pilot {
-    static  HashMap <Pilot , String> PilotReg= new HashMap<>();
+    static  HashMap <String, Pilot> PilotReg= new HashMap<>();
     
    
         
@@ -23,14 +23,13 @@ public class Pilot {
         
             this.name = name;
             this.id = id;
-        
+            putToMap();
         
         }
    
-    
-    public static void putToMap(String name,Pilot pilot){
+    private void putToMap(){
         
-        PilotReg.put(pilot,name);
+        PilotReg.put(this.name, this);
     
     }
     
